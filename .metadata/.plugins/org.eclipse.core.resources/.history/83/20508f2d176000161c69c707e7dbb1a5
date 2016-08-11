@@ -1,0 +1,7 @@
+package ecme.springmvc.domain;
+
+public class Authority {
+	private long id;
+	private String username;
+	private Strung authority;
+}
