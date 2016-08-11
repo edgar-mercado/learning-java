@@ -1,0 +1,11 @@
+package ecme.spring.config;
+
+import com.spring.service.BlogPostService;
+import org.springframework.context.annotation.Bean;
+
+public class JavaConfig {
+	@Bean
+	public BlogPostService blogPostService(){
+		return null;
+	}
+}

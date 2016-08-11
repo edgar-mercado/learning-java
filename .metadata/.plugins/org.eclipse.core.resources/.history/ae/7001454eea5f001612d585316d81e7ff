@@ -1,0 +1,12 @@
+package ecme.spring.domain;
+
+import java.util.Date;
+
+public class BlogPost {
+	private long id;
+	private String title;
+	private String content;
+	private Date publishDate;
+	private boolean draft;
+	
+}

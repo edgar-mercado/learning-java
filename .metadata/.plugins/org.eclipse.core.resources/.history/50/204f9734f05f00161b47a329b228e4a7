@@ -1,0 +1,29 @@
+package ecme.spring.config;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import ecme.spring.domain.BlogPost;
+import ecme.spring.service.BlogPostService;
+
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		ApplicationContext appContext = new AnnotationConfigApplicationContext(JavaConfig.class);
+		// Call the Bean by instance type
+		//BlogPostService blogPostService = appContext.getBean(BlogPostService.class);
+		
+		// Call the Bean by method name or identifier
+		BlogPostService blogPostService = (BlogPostService)appContext.getBean("blogPostService");
+		BlogPost bPost = new BlogPost();
+		bPost.setId(1);
+		bPost.setTitle("Java an Spring");
+		bPost.setContent("asdfasdasdf");
+		blogPostService.savePost(bPost);
+		((ConfigurableApplicationContext) appContext).close();
+
+	}
+
+}

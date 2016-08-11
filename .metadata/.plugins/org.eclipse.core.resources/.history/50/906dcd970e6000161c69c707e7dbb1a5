@@ -1,0 +1,7 @@
+package ecme.spring.service;
+
+import ecme.springmvc.domain.BlogPost;
+
+public interface ServiceManager {
+	void sendBlogPost(BlogPost blogPost);
+}

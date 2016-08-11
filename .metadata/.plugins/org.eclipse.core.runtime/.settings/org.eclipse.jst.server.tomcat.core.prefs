@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+locationcom.pivotal.server.tc.runtime.80=/Users/emercado/Documents/appServers/pivotal-tc-server-standard-3.1.5.RELEASE
+locationorg.eclipse.jst.server.tomcat.runtime.80=/Users/emercado/Documents/appServers/apache-tomcat-8.0.35

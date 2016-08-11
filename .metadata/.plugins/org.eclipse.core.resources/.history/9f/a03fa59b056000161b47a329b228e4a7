@@ -1,0 +1,8 @@
+package ecme.springmvc.config;
+
+/**
+ * Configuration class dispatcher-servlet.xml
+ * */
+public class WebConfig {
+	
+}

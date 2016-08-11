@@ -1,0 +1,8 @@
+/** Domain objects o POJOS
+ * 
+ */
+/**
+ * @author emercado
+ *
+ */
+package ecme.spring.domain;

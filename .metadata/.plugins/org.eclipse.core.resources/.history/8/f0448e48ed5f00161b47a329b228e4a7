@@ -1,0 +1,16 @@
+package ecme.spring.config;
+
+import com.spring.service.BlogPostService;
+
+import ecme.spring.impl.BlogPostServiceImpl;
+
+import org.springframework.context.annotation.*;
+
+@Configuration
+public class JavaConfig {
+	
+	@Bean
+	public BlogPostService blogPostService(){
+		return new BlogPostServiceImpl();
+	}
+}

@@ -1,0 +1,5 @@
+package ecme.emailConfig;
+
+public class EmailConfig {
+
+}
