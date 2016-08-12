@@ -1,5 +1,0 @@
-package ecme.spring.impl;
-
-public class EmailServiceImp {
-
-}
