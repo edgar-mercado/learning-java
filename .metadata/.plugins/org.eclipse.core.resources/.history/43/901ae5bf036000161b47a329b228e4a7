@@ -1,5 +1,0 @@
-package ecme.springmvc.config;
-
-public class WebAppInitializer {
-
-}
