@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
-
    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -14,10 +12,10 @@
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 
 
-<title>Hello World</title>
+<title>Access DENIED</title>
 </head>
 <body>
-<h1>Hellow from Spring MVC</h1>
+<h1>Access DENIED</h1>
 
  <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -40,23 +38,8 @@
     
    <div class="container">
     
-      <h1>Java Spring MVC(JavaConfig)</h1>
-      <p>The sample application provided by Spring MVC JavaConfig udemy course</p>
-	  <p>Welcome to Java Spring MVC with Java Configuration</p>
-	  <a href="${pageContext.request.contextPath}/displayUsets">Display users Embedded</a> <br />
-	  <a href="${pageContext.request.contextPath}/displayUsers">Display users MYSQL</a><br />
-	  <a href="${pageContext.request.contextPath}/newblogpost.html">New Blog Post</a><br />
-	  <a href="${pageContext.request.contextPath}/blogposts">View Blog Post</a><br />
-	   <a href="${pageContext.request.contextPath}/admin.html">Admin Page</a><br />
-	  <br/>
-	  	  <br/>
-	  	
-<security:authorize access="hasAnyRole('ROLE ADMIN','ROLE USER')">
-  <b>Your login is as: </b><security:authentication property="principal.username"/>
-  whit the role of <security:authentication property="principal.authorities"/>
-  <br/>
-  <a href="<c:url value="/logout"/>">Logout</a>
-</security:authorize>
+      <h1>ACCESS DENIED</h1>
+    
     </div> <!-- /container -->
     
        <footer class="footer">

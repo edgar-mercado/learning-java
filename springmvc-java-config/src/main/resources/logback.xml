@@ -2,7 +2,7 @@
 <!DOCTYPE xml>
 <configuration scan="true" scanPeriod="30 seconds">
 
-	<property name="LOG_HOME" value="/Users/emercado/Documents/ecme/gitSpring/learning-java/springmvc-java-config" />
+	<property name="LOG_HOME" value="/" />
 
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>

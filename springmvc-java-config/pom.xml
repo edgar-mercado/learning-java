@@ -57,7 +57,7 @@
             <version>${hibernate.version}</version>
         </dependency>
  
- 		<!-- Spring Security 
+ 		<!-- Spring Security  -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
@@ -75,7 +75,7 @@
             <artifactId>spring-security-config</artifactId>
             <version>${spring.security.version}</version>
         </dependency>
-                -->
+          
 		<!-- Logging with SLF4J & LogBack -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -125,11 +125,13 @@
 		</dependency>
         		
         <!-- MySQL Database Driver -->
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.10</version>
-        </dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.6</version>
+		</dependency>
+
         
         <!-- Test Artifacts -->
 		<dependency>

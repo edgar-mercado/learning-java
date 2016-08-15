@@ -2,12 +2,35 @@ package ecme.springmvc.domain;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="blog_post")
 public class BlogPost {
+	@Id	
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column (name="id",unique=true, nullable=true)
 	private long id;
+	@Column (name="title", nullable=true)
 	private String title;
+	@Column (name="content",nullable=true)
 	private String content;
+	@Column (name="publishDate", nullable=true)
 	private Date publishDate;
+	@Column (name="draft", nullable=true)
 	private boolean draft;
+	
+	@ManyToOne
+	@JoinColumn(name="user_id", nullable=false	)
+	private User user;
+	
 	public long getId() {
 		return id;
 	}
@@ -37,6 +60,14 @@ public class BlogPost {
 	}
 	public void setDraft(boolean draft) {
 		this.draft = draft;
+	}
+	
+	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 	@Override
 	public int hashCode() {
@@ -79,5 +110,7 @@ public class BlogPost {
 			return false;
 		return true;
 	}
+	
+	
 	
 }

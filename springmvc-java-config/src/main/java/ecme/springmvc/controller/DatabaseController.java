@@ -14,20 +14,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class EmbeddedDatabaseController {
+public class DatabaseController {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(EmbeddedDatabaseController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseController.class);
 	
 	@Autowired
-	@Qualifier("dsEmbedded")
-	DataSource dsEmbedded;
+	@Qualifier("mySqlDS")
+	DataSource ds;
 	
 	private JdbcTemplate jdbcTemplate;
 	
-	@RequestMapping(value="/displayUsets")
+	@RequestMapping(value="/displayUsers")
 	public String displayUsers(){
-		jdbcTemplate= new JdbcTemplate(dsEmbedded);
-		List<Map<String, Object>> usrList = jdbcTemplate.queryForList("Select * from user");
+		LOGGER.debug("-------------------MYSQL-----------");
+		jdbcTemplate= new JdbcTemplate(ds);
+		List<Map<String, Object>> usrList = jdbcTemplate.queryForList("Select * from usermanual");
 		for (Map<String, Object> map : usrList) {
 			LOGGER.debug("------------> Username:"+map.get("username"));
 		}
